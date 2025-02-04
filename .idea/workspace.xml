@@ -4,57 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="4e901830-5f0d-46f5-aee2-0e706cc7980e" name="Changes" comment="" />
-=======
-    <list default="true" id="4e901830-5f0d-46f5-aee2-0e706cc7980e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BankLoanService/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/BankLoanServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/audit/AuditAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/constants/LoansConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/controller/LoansController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/dto/ErrorResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/dto/LoanContactInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/dto/LoansDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/dto/ResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/entity/Loans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/exception/LoanAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/mapper/LoansMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/repository/LoansRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/service/ILoansService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/java/com/bank/bankloanservice/service/impl/LoansServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankLoanService/src/test/java/com/bank/bankloanservice/BankLoanServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccountService/docker-compose.yml" beforeDir="false" />
+    <list default="true" id="970c6878-6c14-4116-9e8a-ee0d439a4c02" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/dto/CardDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/dto/LoansDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/service/client/CardsFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/service/client/LoansFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Spring-Cloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BankAccountService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccountService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/dto/AccountsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/dto/AccountsContactInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/AccountServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccountService/src/main/java/com/bank/accountservice/AccountServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BankAccountService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BankAccountService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccountService/src/main/resources/application_prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankAccountService/src/main/resources/application_qa.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BankCardService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankCardService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankCardService/src/main/java/com/bank/cardservice/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankCardService/src/main/java/com/bank/cardservice/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankCardService/src/main/java/com/bank/cardservice/dto/CardsContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankCardService/src/main/java/com/bank/cardservice/dto/CardsContactInfoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BankCardService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BankCardService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankCardService/src/main/resources/application_prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankCardService/src/main/resources/application_qa.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankConfigServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankConfigServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankEurekaServer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BankEurekaServer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankLoanService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankLoanService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankLoanService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BankLoanService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" afterDir="false" />
     </list>
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/BankEurekaServer">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-<<<<<<< HEAD
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -65,76 +75,29 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/VishnuNarasimhan/Bank-Microservice.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/VishnuNarasimhan/Bank-Microservice-H2-DB.git&quot;,
     &quot;accountId&quot;: &quot;9a3f1636-d39a-4102-a73f-9f31fa1fa88b&quot;
   }
 }</component>
-=======
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/BankLoanService" />
-  </component>
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2sOyYA4Zf6wGw1wciTr45TPTClS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2sYimxOZokrQwzz99wwwq0R75JY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.default.accountService: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AccountServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BankConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BankEurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BankLoanServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CardServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Backup Folder/Studies and Lectures/Project/Microservice Project/Bank Website - Spring-Cloud-Config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
-  }
-}</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Backup Folder\Studies and Lectures\Project\Microservice Project\Bank Website - Spring-Cloud-Config\Bank-Microservice\docker-compose\qa" />
-      <recent name="D:\Backup Folder\Studies and Lectures\Project\Microservice Project\Bank Website - Spring-Cloud-Config\Bank-Microservice\docker-compose\default" />
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Docker.default.accountService: Compose Deployment.executor": "Run",
+    "Gradle.Build BankEurekaServer.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -142,37 +105,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.AccountServiceApplication.executor": "Run",
     "Spring Boot.BankConfigServerApplication.executor": "Run",
+    "Spring Boot.BankEurekaServerApplication.executor": "Run",
     "Spring Boot.BankLoanServiceApplication.executor": "Run",
     "Spring Boot.CardServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Backup Folder/Studies and Lectures/Project/Microservice Project/Bank Website - Spring-Cloud-Config/Bank-Microservice",
+    "last_opened_file_path": "D:/Backup Folder/Studies and Lectures/Project/Ecommerce Website",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
-      <recent name="D:\Backup Folder\Studies and Lectures\Project\Microservice Project\Bank Website - Spring-Cloud-Config\Spring-Cloud\docker-compose\qa" />
-      <recent name="D:\Backup Folder\Studies and Lectures\Project\Microservice Project\Bank Website - Spring-Cloud-Config\Spring-Cloud\docker-compose\prod" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Backup Folder\Studies and Lectures\Project\Microservice Project\Bank Website - Spring-Cloud-Config\docker-compose\default" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bank.accountservice.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -184,11 +134,7 @@
       </set>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Spring Boot.AccountServiceApplication">
-=======
   <component name="RunManager" selected="Spring Boot.CardServiceApplication">
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="AccountService" />
@@ -203,23 +149,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="BankConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="configserver" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bank.configserver.BankConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
     <configuration name="BankEurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="BankEurekaServer" />
+      <module name="BankEurekaServer.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bank.BankEurekaServer.BankEurekaServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-=======
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
     <configuration name="BankLoanServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="BankLoanService" />
@@ -234,43 +183,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="CardServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="CardService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bank.cardservice.CardServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bank.cardservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="default.accountService: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="accountService" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose/default/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
-        <item itemvalue="Spring Boot.AccountServiceApplication" />
-        <item itemvalue="Spring Boot.BankLoanServiceApplication" />
-=======
+        <item itemvalue="Spring Boot.CardServiceApplication" />
         <item itemvalue="Spring Boot.BankLoanServiceApplication" />
         <item itemvalue="Spring Boot.AccountServiceApplication" />
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
-        <item itemvalue="Docker.default.accountService: Compose Deployment" />
+        <item itemvalue="Spring Boot.BankConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -285,34 +217,27 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4e901830-5f0d-46f5-aee2-0e706cc7980e" name="Changes" comment="" />
-      <created>1738340960654</created>
+      <changelist id="970c6878-6c14-4116-9e8a-ee0d439a4c02" name="Changes" comment="" />
+      <created>1738639072126</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1738340960654</updated>
-      <workItem from="1738340961710" duration="11574000" />
-      <workItem from="1738420271793" duration="1288000" />
-      <workItem from="1738424472889" duration="5156000" />
-      <workItem from="1738438015680" duration="18000" />
-      <workItem from="1738501387104" duration="513000" />
-      <workItem from="1738502003940" duration="6980000" />
-<<<<<<< HEAD
-      <workItem from="1738554294216" duration="13590000" />
-      <workItem from="1738633862928" duration="94000" />
-      <workItem from="1738634231256" duration="1085000" />
-=======
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
+      <updated>1738639072126</updated>
+      <workItem from="1738639073692" duration="2479000" />
+      <workItem from="1738645546739" duration="4282000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/BankAccountService" />
-      <path value="$PROJECT_DIR$/BankCardService" />
-      <path value="$PROJECT_DIR$/BankLoanService" />
-    </ignored-roots>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.netflix.discovery.shared.transport.TransportException" package="com.netflix.discovery.shared.transport" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

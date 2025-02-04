@@ -9,10 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BankLoanService" />
         <module name="configserver" />
-<<<<<<< HEAD
-        <module name="BankEurekaServer" />
-=======
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
         <module name="CardService" />
         <module name="AccountService" />
       </profile>
@@ -21,10 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AccountService" options="-parameters" />
-<<<<<<< HEAD
       <module name="BankEurekaServer" options="-parameters" />
-=======
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
       <module name="BankLoanService" options="-parameters" />
       <module name="CardService" options="-parameters" />
       <module name="configserver" options="-parameters" />

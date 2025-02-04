@@ -4,10 +4,6 @@
     <file url="file://$PROJECT_DIR$/BankAccountService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/BankCardService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/BankConfigServer/src/main/java" charset="UTF-8" />
-<<<<<<< HEAD
-    <file url="file://$PROJECT_DIR$/BankEurekaServer/src/main/java" charset="UTF-8" />
-=======
->>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
     <file url="file://$PROJECT_DIR$/BankLoanService/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: BankEurekaServer
+    name: eurekaserver
   config:
     import: "configserver:http://localhost:8071/"
 
@@ -19,6 +19,6 @@ management:
       probes:
         enabled: true
 
-# Remaining properties of eureka is mentioned in the git-hub config file.
+# Remaining properties of eureka is mentioned in the git-hub config file eureka.yml.
 
 

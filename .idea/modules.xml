@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Spring-Cloud.iml" filepath="$PROJECT_DIR$/.idea/Spring-Cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Bank-Microservice-H2-DB.iml" filepath="$PROJECT_DIR$/.idea/Bank-Microservice-H2-DB.iml" />
     </modules>
   </component>
 </project>

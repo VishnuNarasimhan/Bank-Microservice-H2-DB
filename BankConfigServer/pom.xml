@@ -75,7 +75,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>vishnunarasim/configserver:v7</image>
+						<image>vishnunarasim/configserver:v2</image>
 					</to>
 				</configuration>
 			</plugin>
