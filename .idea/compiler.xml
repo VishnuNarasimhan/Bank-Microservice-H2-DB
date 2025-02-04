@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BankLoanService" />
+        <module name="configserver" />
+<<<<<<< HEAD
+        <module name="BankEurekaServer" />
+=======
+>>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
+        <module name="CardService" />
+        <module name="AccountService" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AccountService" options="-parameters" />
+<<<<<<< HEAD
+      <module name="BankEurekaServer" options="-parameters" />
+=======
+>>>>>>> 9d7567ca2f83be97953fe3369569acadd8562db4
+      <module name="BankLoanService" options="-parameters" />
+      <module name="CardService" options="-parameters" />
+      <module name="configserver" options="-parameters" />
+    </option>
+  </component>
+</project>

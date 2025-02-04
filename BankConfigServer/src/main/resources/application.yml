@@ -1,0 +1,45 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: "BankConfigServer"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/VishnuNarasimhan/BankWebsite-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+#        native:
+#          search-locations: "file:///C://BankWebsiteYML//config"
+##          search-locations: "classpath:/config"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+encrypt:
+  key: "A898EAE9A87C8E52ADFA4AE5CA41F"
+
+
