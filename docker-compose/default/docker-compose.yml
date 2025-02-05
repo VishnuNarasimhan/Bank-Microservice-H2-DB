@@ -1,28 +1,31 @@
 services:
-  rabbit:
-    image: rabbitmq:3.13-management
-    hostname: rabbitmq
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    healthcheck:
-      test: rabbitmq-diagnostics check_port_connectivity
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 5s
-    extends:
-      file: common-config.yml
-      service: network-deploy-service
+
+#  Comment rabbitMQ due to memory storage...
+#  rabbit:
+#    image: rabbitmq:3.13-management
+#    hostname: rabbitmq
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
+#    healthcheck:
+#      test: rabbitmq-diagnostics check_port_connectivity
+#      interval: 10s
+#      timeout: 5s
+#      retries: 10
+#      start_period: 5s
+#    extends:
+#      file: common-config.yml
+#      service: network-deploy-service
 
   configServer:
     image: "vishnunarasim/configserver:v8"
     container_name: configServer-ms
     ports:
       - "8071:8071"
-    depends_on:
-      rabbit:
-        condition: service_healthy
+#    Comment rabbitMQ due to memory storage...
+#    depends_on:
+#      rabbit:
+#        condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
@@ -39,9 +42,6 @@ services:
     ports:
       - "8070:8070"
     depends_on:
-#      comment rabbitMQ due to memory storage...
-#      rabbit:
-#        condition: service_healthy
       configServer:
         condition: service_healthy
     healthcheck:
