@@ -35,9 +35,9 @@ management:
   info:
     env:
       enabled: true
-    endpoint:
-      shutdown:
-        access: unrestricted
+  endpoint:
+    shutdown:
+      access: unrestricted
 
 eureka:
   instance:
