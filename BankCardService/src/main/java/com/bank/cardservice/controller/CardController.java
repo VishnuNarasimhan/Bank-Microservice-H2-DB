@@ -6,6 +6,8 @@ import com.bank.cardservice.dto.CardsContactInfoDto;
 import com.bank.cardservice.dto.ResponseDto;
 import com.bank.cardservice.service.ICardService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 //@AllArgsConstructor
 public class CardController {
+    private static final Logger logger = LoggerFactory.getLogger(CardController.class);
+
     private final ICardService iCardService;
 
     private CardController(ICardService iCardService) {
@@ -49,7 +53,11 @@ public class CardController {
      * @return ResponseDto
      */
     @GetMapping("/fetch")
-    public ResponseEntity<CardDto> getCard(@RequestParam String mobileNumber) {
+    public ResponseEntity<CardDto> getCard(@RequestParam String mobileNumber,
+                                           @RequestHeader("banks-correlation-id") String correlationId) {
+
+        logger.debug("banks-correlation-id: " + correlationId);
+
         CardDto cardDto = iCardService.fetchCard(mobileNumber);
 
         return ResponseEntity

@@ -10,14 +10,13 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(
         name = "REST APIs for Customer Service",
@@ -30,6 +29,8 @@ import org.springframework.web.bind.annotation.RestController;
 // But validations doesn't know how to send error into error response or body of the response
 // So extend the ResponseEntityExceptionHandler in GlobalExceptionHandler
 public class CustomerController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
     private ICustomersService iCustomersService;
 
@@ -56,11 +57,14 @@ public class CustomerController {
     }
     )
     @GetMapping("/fetchCustomerDetails")
-    public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(@RequestParam
-                                                                   @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number cannot be null or empty")
-                                                                   String mobileNumber) {
+    public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(
+            @RequestHeader("banks-correlation-id") String correlationId,
+            @RequestParam
+            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number cannot be null or empty")
+            String mobileNumber) {
 
-        CustomerDetailsDto customerDetailsDto = iCustomersService.fetchCustomerDetails(mobileNumber);
+        logger.debug("banks-correlation-id: " + correlationId);
+        CustomerDetailsDto customerDetailsDto = iCustomersService.fetchCustomerDetails(mobileNumber, correlationId);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(customerDetailsDto);

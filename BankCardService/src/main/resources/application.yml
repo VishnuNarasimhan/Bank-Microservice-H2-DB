@@ -53,3 +53,9 @@ info:
     name: "Cards Application"
     description: "Bank's Cards Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      bank:
+        cardservice: DEBUG

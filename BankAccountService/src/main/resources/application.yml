@@ -53,3 +53,9 @@ info:
     name: "Accounts Application"
     description: "Bank's Accounts Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      bank:
+        accountservice: DEBUG

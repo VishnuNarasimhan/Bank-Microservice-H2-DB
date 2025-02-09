@@ -53,3 +53,8 @@ info:
     name: "Loans Application"
     description: "Bank's Loans Application"
     version: "1.0.0"
+logging:
+  level:
+    com:
+      bank:
+        bankloanservice: DEBUG

@@ -95,7 +95,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>vishnunarasim/loanservice:v8</image>
+						<image>vishnunarasim/loanservice:v9</image>
 					</to>
 				</configuration>
 			</plugin>
