@@ -110,7 +110,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>vishnunarasim/cardsservice:v9.2</image>
+						<image>vishnunarasim/cardsservice:v11</image>
 					</to>
 				</configuration>
 			</plugin>

@@ -89,7 +89,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>vishnunarasim/gatewayserver:v9</image>
+						<image>vishnunarasim/gatewayserver:v11</image>
 					</to>
 				</configuration>
 			</plugin>

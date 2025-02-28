@@ -127,7 +127,7 @@
                 <version>3.3.2</version>
                 <configuration>
                     <to>
-                        <image>vishnunarasim/accountservice:v9.2</image>
+                        <image>vishnunarasim/accountservice:v11</image>
                     </to>
                 </configuration>
             </plugin>
