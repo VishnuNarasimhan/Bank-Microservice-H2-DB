@@ -6,6 +6,7 @@ import com.bank.accountservice.dto.CustomerDto;
 import com.bank.accountservice.dto.ErrorResponseDto;
 import com.bank.accountservice.dto.ResponseDto;
 import com.bank.accountservice.service.IAccountService;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -15,6 +16,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -23,6 +26,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.concurrent.TimeoutException;
 
 @Tag(
         name = "CRUD REST APIs for Accounts Service",
@@ -35,6 +40,7 @@ import org.springframework.web.bind.annotation.*;
 // But validations doesn't know how to send error into error response or body of the response
 // So extend the ResponseEntityExceptionHandler in GlobalExceptionHandler
 public class AccountController {
+    private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
 
     private IAccountService iAccountService;
 
@@ -211,11 +217,22 @@ public class AccountController {
             )
     }
     )
+
+    @Retry(name = "getBuildInfo", fallbackMethod = "getBuildInfoFallback")
     @GetMapping("/build-info")
-    public ResponseEntity<String> getBuildInfo() {
+    public ResponseEntity<String> getBuildInfo() throws TimeoutException {
+        logger.debug("getBuildInfo() method invoked");
+//        throw new NullPointerException(); // For Testing Retry Pattern
+        throw new TimeoutException();
+//        return ResponseEntity
+//                .status(HttpStatus.OK)
+//                .body(buildVersion);
+    }
+    public ResponseEntity<String> getBuildInfoFallback(Throwable throwable) {
+        logger.debug("getBuildInfoFallback() method Invoked");
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(buildVersion);
+                .body("0.9");
     }
 
     @Operation(
