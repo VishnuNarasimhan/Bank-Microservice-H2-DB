@@ -223,10 +223,10 @@ public class AccountController {
     public ResponseEntity<String> getBuildInfo() throws TimeoutException {
         logger.debug("getBuildInfo() method invoked");
 //        throw new NullPointerException(); // For Testing Retry Pattern
-        throw new TimeoutException();
-//        return ResponseEntity
-//                .status(HttpStatus.OK)
-//                .body(buildVersion);
+//        throw new TimeoutException();
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(buildVersion);
     }
     public ResponseEntity<String> getBuildInfoFallback(Throwable throwable) {
         logger.debug("getBuildInfoFallback() method Invoked");

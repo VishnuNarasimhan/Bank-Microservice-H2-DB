@@ -230,10 +230,10 @@ public class LoansController {
     @GetMapping("/contact-info")
     public ResponseEntity<LoanContactInfoDto> getContactInfo() {
         logger.debug("Invoked Loans contact info-API");
-        throw new RuntimeException(); // For testing Retry Pattern
-//        return ResponseEntity
-//                .status(HttpStatus.OK)
-//                .body(loanContactInfoDto);
+//        throw new RuntimeException(); // For testing Retry Pattern
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(loanContactInfoDto);
     }
 
 }
