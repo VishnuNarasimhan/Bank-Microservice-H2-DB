@@ -1,31 +1,31 @@
 services:
 
-#  Comment rabbitMQ due to memory storage...
-#  rabbit:
-#    image: rabbitmq:3.13-management
-#    hostname: rabbitmq
-#    ports:
-#      - "5672:5672"
-#      - "15672:15672"
-#    healthcheck:
-#      test: rabbitmq-diagnostics check_port_connectivity
-#      interval: 10s
-#      timeout: 5s
-#      retries: 10
-#      start_period: 5s
-#    extends:
-#      file: common-config.yml
-#      service: network-deploy-service
+  #  Comment rabbitMQ due to memory storage...
+  #  rabbit:
+  #    image: rabbitmq:3.13-management
+  #    hostname: rabbitmq
+  #    ports:
+  #      - "5672:5672"
+  #      - "15672:15672"
+  #    healthcheck:
+  #      test: rabbitmq-diagnostics check_port_connectivity
+  #      interval: 10s
+  #      timeout: 5s
+  #      retries: 10
+  #      start_period: 5s
+  #    extends:
+  #      file: common-config.yml
+  #      service: network-deploy-service
 
   configServer:
-    image: "vishnunarasim/configserver:v8"
+    image: "vishnunarasim/configserver:v9"
     container_name: configServer-ms
     ports:
       - "8071:8071"
-#    Comment rabbitMQ due to memory storage...
-#    depends_on:
-#      rabbit:
-#        condition: service_healthy
+    #    Comment rabbitMQ due to memory storage...
+    #    depends_on:
+    #      rabbit:
+    #        condition: service_healthy
     healthcheck:
       test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
@@ -37,7 +37,7 @@ services:
       service: microservice-base-config
 
   eurekaServer:
-    image: "vishnunarasim/eurekaserver:v8.2"
+    image: "vishnunarasim/eurekaserver:v9.1"
     container_name: eurekaServer-ms
     ports:
       - "8070:8070"
@@ -57,7 +57,7 @@ services:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
   accountService:
-    image: "vishnunarasim/accountservice:v8"
+    image: "vishnunarasim/accountservice:v9.2"
     container_name: account-ms
     ports:
       - "8080:8080"
@@ -66,14 +66,20 @@ services:
         condition: service_healthy
       eurekaServer:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "accounts"
     extends:
       file: common-config.yml
-      service: microservice-configServer-config
+      service: microservice-eureka-config
 
   loanService:
-    image: "vishnunarasim/loanservice:v8"
+    image: "vishnunarasim/loanservice:v9.2"
     container_name: loan-ms
     ports:
       - "9000:9000"
@@ -82,14 +88,20 @@ services:
         condition: service_healthy
       eurekaServer:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "loans"
     extends:
       file: common-config.yml
-      service: microservice-configServer-config
+      service: microservice-eureka-config
 
   cardService:
-    image: "vishnunarasim/cardsservice:v8"
+    image: "vishnunarasim/cardsservice:v9.2"
     container_name: card-ms
     ports:
       - "9090:9090"
@@ -98,11 +110,35 @@ services:
         condition: service_healthy
       eurekaServer:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:9090/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     environment:
       SPRING_APPLICATION_NAME: "cards"
     extends:
       file: common-config.yml
-      service: microservice-configServer-config
+      service: microservice-eureka-config
+
+  gatewayServer:
+    image: "vishnunarasim/gatewayserver:v9"
+    container_name: gatewayserver-ms
+    ports:
+      - "8072:8072"
+    depends_on:
+      accountService:
+        condition: service_healthy
+      cardService:
+        condition: service_healthy
+      loanService:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "gatewayserver"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
 
 networks:
   bankService:
