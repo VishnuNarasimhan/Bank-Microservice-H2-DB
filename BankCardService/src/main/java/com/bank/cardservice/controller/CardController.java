@@ -56,9 +56,9 @@ public class CardController {
     public ResponseEntity<CardDto> getCard(@RequestParam String mobileNumber,
                                            @RequestHeader("banks-correlation-id") String correlationId) {
 
-        logger.debug("banks-correlation-id: " + correlationId);
-
+        logger.debug("fetchCardDetails method started");
         CardDto cardDto = iCardService.fetchCard(mobileNumber);
+        logger.debug("fetchCardDetails method ended");
 
         return ResponseEntity
                 .status(HttpStatus.OK)

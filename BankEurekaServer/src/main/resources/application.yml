@@ -18,6 +18,17 @@ management:
     health:
       probes:
         enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    com:
+      bank:
+        BankEurekaServer: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 # Remaining properties of eureka is mentioned in the git-hub config file eureka.yml.
 

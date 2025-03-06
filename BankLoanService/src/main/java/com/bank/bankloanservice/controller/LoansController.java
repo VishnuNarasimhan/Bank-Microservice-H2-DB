@@ -105,8 +105,9 @@ public class LoansController {
                                                      String mobileNumber,
                                                      @RequestHeader("banks-correlation-id") String correlationId) {
 
-        logger.debug("banks-correlation-id: " + correlationId);
+        logger.debug("fetchLoanDetails method started");
         LoansDto loansDto = iLoansService.fetchLoan(mobileNumber);
+        logger.debug("fetchLoanDetails method ended");
         return ResponseEntity.status(HttpStatus.OK).body(loansDto);
     }
 

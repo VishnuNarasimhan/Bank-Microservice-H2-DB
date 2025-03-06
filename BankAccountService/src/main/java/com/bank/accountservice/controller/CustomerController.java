@@ -63,8 +63,9 @@ public class CustomerController {
             @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number cannot be null or empty")
             String mobileNumber) {
 
-        logger.debug("banks-correlation-id: " + correlationId);
+        logger.debug("fetchCustomerDetails method started");
         CustomerDetailsDto customerDetailsDto = iCustomersService.fetchCustomerDetails(mobileNumber, correlationId);
+        logger.debug("fetchCustomerDetails method ended");
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(customerDetailsDto);

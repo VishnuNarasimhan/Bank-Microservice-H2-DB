@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 8090
 
 spring:
   application:
@@ -46,6 +46,9 @@ management:
     health:
       probes:
         enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
 
 eureka:
   instance:
@@ -67,3 +70,5 @@ logging:
     com:
       bank:
         cardservice: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"

@@ -11,8 +11,13 @@ spring:
           enabled: false
           lower-case-service-id: true
       httpclient:
-        connect-timeout: 7000
+        connect-timeout: 9000
         response-timeout: 2s
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:7080/realms/master/protocol/openid-connect/certs"
 
 management:
   endpoints:
@@ -25,6 +30,9 @@ management:
   info:
     env:
       enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
 
 info:
   app:
@@ -37,6 +45,8 @@ logging:
     com:
       bank:
         BankGatewayServer: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 resilience4j.circuitbreaker:
   configs:
